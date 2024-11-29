@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Шахматный клуб "Эндшпиль"</title>
+    <link rel="stylesheet" href="chessclub/css/bootstrap.min.css">
+    <link rel="stylesheet" href="chessclub/css/style.css">
+    <script src="chessclub/js/bootstrap.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.3.js"
+  integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+  crossorigin="anonymous">
+</script>
+</head>
+
+<body class="body-top">
+    <header class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <img id="logo_img" src="img/logo.png" alt="Логотип шахматного клуба">
+            </div>
+            <div class="col-9">
+                <h1>Эндшпиль</h1>
+            </div>
+        </div>
+
+        <div id="menu">
+            <nav class="nav nav-pills flex-column flex-sm-row">
+                <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href="index.html">Главная страница</a>
+                <a class="flex-sm-fill text-sm-center nav-link" href="competitions.html">Соревнования</a>
+                <a class="flex-sm-fill text-sm-center nav-link" href="contacts.html">О нас</a>
+            </nav>
+        </div>
+    </header>
+
+    <div id="main">
+        <h2>Актуальные турниры</h2>
+        <div class="row row-cols-1 row-cols-sm-3">
+            <div class="col" id="competitions">
+                <div class="competition">
+                    <h6><b>Турнир новичков</b></h6>
+                    <img src="img/newcomer_tournament.jpg" alt="Турнир новичков">
+                    <p>Дата: 20.09.2024, 14:00</p>
+                    <p><button class="actia" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newcomer_tournament_info">Подробнее о турнире</button></p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="competition">
+                    <h6><b>Турнир любителей 4-го разряда</b></h6>
+                    <img src="img/amateur_4th_rank.jpg" alt="Турнир любителей 4-го разряда">
+                    <p>Дата: 25.09.2024, 12:00</p>
+                    <p><button class="actia">Подробнее о турнире</button></p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="competition">
+                    <h6><b>Турнир любителей 3-го разряда</b></h6>
+                    <img src="img/amateur_3rd_rank.jpg" alt="Турнир любителей 3-го разряда">
+                    <p>Дата: 30.09.2024, 15:00</p>
+                    <p><button class="actia">Подробнее о турнире</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="row">
+            <div class="col"><p>Свяжитесь с нами - +7 (925) 826-84-31</p></div>
+        </div>
+    </footer>
+
+
+
+	<div class="modal fade" id="newcomer_tournament_info">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            <b>Турнир новичков</b>
+                        </h5>
+                        <button type="button" 
+                                class="btn-close" 
+                                data-bs-dismiss="modal">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>I am a Modal</p>
+                        <p>
+                            Bootstrap Modal Via Data Attributes
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <button class="btn btn-primary" data-bs-target="#newcomer_tournament_signup" data-bs-toggle="modal" data-bs-dismiss="modal">Подать заявку</button>
+                    </div>
+                </div>
+            </div>
+	</div>
+	
+
+	<div class="modal fade" id="newcomer_tournament_signup" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+        <form method = "get" action = "#" id = "tournamentForm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalToggleLabel2">Заявка</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                <div class="col"><label for="name">Введите ваше полное имя</label></div>
+                <div class="col"><input type="text" id="name" name="name" size="20" form="tournamentForm"/></div>
+                </div>
+                    <div class="row">
+                <div class="col"><label for="name">Введите ваш номер телефона</label></div>
+                <div class="col"><input type="tel" id="tel" name="tel" size="20" form="tournamentForm"/></div>
+                </div>
+                    <div class="row">
+                <div class="col"><label for="email">Введите ваш электронный адрес</label></div>
+                <div class="col"><input type="email" id="email" name="email"  size="20" form="tournamentForm"/></div>
+                </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-target="#newcomer_tournament_info" data-bs-toggle="modal" data-bs-dismiss="modal">Отмена</button>
+                    <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-dismiss="modal" id="submit">Записаться</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    if (window.jQuery) {
+      var vJq = jQuery.fn.jquery;
+      console.log(vJq);
+    }
+</script>
+
+<script>
+    $('#tournamentForm').on('submit',
+    function()
+    {
+            //let age = prompt('Сколько тебе лет?', 100);
+            //lert(`Тебе ${age} лет!`); // Тебе 100 лет!
+            //alert("Вы записались на турнир новичков.");
+        let fio = $("#name").val();
+        let phone = $("#tel").val();
+        let mail = $("#email").val();
+
+        alert("Вы записались на турнир новичков.\n\nВаше имя: " + fio + "\nВаш телефон: " + phone + "\nВаш email: " + mail);
+
+            //alert('Вы записались на турнир новичков.\n\nВаше имя: ${fio}\nВаш телефон: ${phone}\nВаш email: ${mail}');
+    });
+</script>
+<!--
+    <script>
+        document.getElementById('submit').addEventListener('click', function() {
+
+            const name = document.getElementById('name').value;
+            const tel = document.getElementById('tel').value;
+            const email = document.getElementById('email').value;
+
+            const confirmationMessage = `Вы записались на турнир новичков.\n\nВаше имя: ${name}\nВаш телефон: ${tel}\nВаш email: ${email}`;
+            alert(confirmationMessage);
+        });
+    </script> -->
+
+</body>
+
+</html>
